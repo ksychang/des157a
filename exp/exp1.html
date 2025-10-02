@@ -10,41 +10,25 @@
     <h2>Open the console to see the code functionality!</h2>
     <script>
         // Prompt: Write a program that reverses the letters in each word in a string of words, but keeps the words in the same order.
+
+        // sequence
         var text = "Write a program that reverses the letters in each word in a string of words, but keeps the words in the same order.";
         var temp = "";
+        var result = "";
         var charCode = 0;
-        // var isALetter = false;
-        // for(var i = 0; i < text.length; i++) {
-        //     temp = "";
-        //     charCode = text.charCodeAt(i);
-        //     if((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123)) {
-        //         isALetter = true;
-        //     }
-        //     while(isALetter) {
-        //         temp += text[i];
-        //         i++;
-
-        //     }
-        //     for(var j = temp.length; j >= 0; j--) {
-        //         console.log(temp[j]);
-        //     }
-
-        // }
         var i = 0;
-        while(i < text.length) {
+        while(i < text.length) { // loop
             charCode = text.charCodeAt(i);
-            if((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123)) {
-                temp += text[i];
+            if((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123)) { // selection
+                temp = text[i] + temp;
             } else {
-                for(var j = temp.length; j >= 0; j--) {
-                console.log(temp[j]);
-                }
+                result = result + temp;
                 temp = "";
-                console.log(text[i]);
+                result += text[i];
             }
-
+            i++;
         }
-
+        console.log(result);
     </script>
 </body>
 </html>
