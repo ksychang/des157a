@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 1</title>
+</head>
+<body>
+    <h1>Experiment 1</h1>
+    <h2>Open the console to see the code functionality!</h2>
+    <script>
+        // Prompt: Write a program that reverses the letters in each word in a string of words, but keeps the words in the same order.
+        var text = "Write a program that reverses the letters in each word in a string of words, but keeps the words in the same order.";
+        var temp = "";
+        var charCode = 0;
+        // var isALetter = false;
+        // for(var i = 0; i < text.length; i++) {
+        //     temp = "";
+        //     charCode = text.charCodeAt(i);
+        //     if((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123)) {
+        //         isALetter = true;
+        //     }
+        //     while(isALetter) {
+        //         temp += text[i];
+        //         i++;
+
+        //     }
+        //     for(var j = temp.length; j >= 0; j--) {
+        //         console.log(temp[j]);
+        //     }
+
+        // }
+        var i = 0;
+        while(i < text.length) {
+            charCode = text.charCodeAt(i);
+            if((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123)) {
+                temp += text[i];
+            } else {
+                for(var j = temp.length; j >= 0; j--) {
+                console.log(temp[j]);
+                }
+                temp = "";
+                console.log(text[i]);
+            }
+
+        }
+
+    </script>
+</body>
+</html>
