@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vmin;
+        }
+
+        h1 {
+            font-family: 'BBH Sans Bogle';
+            font-size: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Experiment 2</h1>
+    <script>
+        /*
+            This program takes three RGB values from user input,
+            then changes the background to the corresponding
+            color. It updates the header to display the values
+            entered, and also changes the text color to be the
+            inverse of the background. Sets values to 255 if not
+            set by user.
+        */
+        var rgb = [];
+        rgb[0] = prompt("Enter a value for RED (0-255):", "");
+        rgb[1] = prompt("Enter a value for GREEN (0-255):", "");
+        rgb[2] = prompt("Enter a value for BLUE (0-255):", "");
+
+        for (var i = 0; i < rgb.length; i++) {
+            if (rgb[i] < 0 || rgb[i] > 255 || rgb[i] === null) {
+                rgb[i] = 255;
+            }
+        }
+
+        document.querySelector('body').style.backgroundColor = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
+
+        console.log(rgb[0]);
+        r = 255 - rgb[0];
+        g = 255 - rgb[1];
+        b = 255 - rgb[2];
+
+        var header = document.querySelector('h1');
+        header.style.color = `rgb(${r}, ${g}, ${b})`;
+        header.innerHTML = `background rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
+    </script>
+</body>
+
+</html>
