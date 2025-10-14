@@ -1,0 +1,150 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* display: flex; */
+    font-family: 'Quicksand';
+    max-width: 1200px;
+    justify-content: center;
+    padding: 0 3vmax;
+    margin: auto;
+    gap: 3vmax;
+}
+
+header {
+    margin-top: 10vmin;
+    padding-bottom: 10vmin;
+    border-bottom: black solid 1px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 5em;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 200;
+}
+
+h3 {
+    font-size: 2rem;
+    margin: 0.5em 0;
+}
+
+.divider {
+    border: grey dashed 0.5px;
+    border-radius: 10px;
+    width: 70vmax;
+    margin: auto;
+}
+
+article {
+    padding: 5vmin 7vmax;
+}
+
+.article-header {
+    display: flex;
+    gap: 50px;
+    margin: 5vmin 0;
+}
+
+.article-num {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+    height: 100px;
+    border-radius: 100px;
+}
+
+#num1 {
+    background-color: red;
+}
+
+#num2 {
+    background-color: green;
+}
+
+#num3 {
+    background-color: blue;
+}
+
+#num4 {
+    background-color: orange;
+}
+
+#num5 {
+    background-color: violet;
+}
+
+.number {
+    color: white;
+    font-size: 50px;
+}
+
+nav {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    position: sticky;
+    margin: 10vmin 5vmin;
+    top: 10vmin;
+    align-self: flex-start;
+}
+
+nav ul {
+    padding-inline-start: 0;
+}
+
+nav ul li {
+    list-style: none;
+    width: 10vmin;
+    height: 10vmin;
+    border-radius: 100px;
+}
+
+nav ul li:hover {
+    background-color: rgb(0, 0, 0, 0.1);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    line-height: 5em;
+}
+
+nav ul li a:hover {
+    font-weight: 900;
+    transition: font-weight 0.5s ease-in-out;
+}
+
+.paragraphs {
+    column-count: 2;
+    column-gap: 5vmax;
+    column-fill: balance;
+    line-height: 2.5em;
+    width: auto;
+}
+
+.paragraphs p {
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+a:link {
+    color: black;
+}
+
+main {
+    display: flex;
+}
+
+footer {
+    border-top: black solid 1px;
+    padding: 5vmin;
+    margin-top: 5vmin;
+}
