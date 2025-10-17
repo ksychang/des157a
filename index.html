@@ -8,18 +8,40 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <h1>Kaitlyn Chang</h1>
-        <h2>DES 157A - Interactive Media II Fall - 2025</h2>
-        <div id="banner">
-            <div></div>
-            <div></div>
-            <div></div>
+        <div>
+            <h1>KAITLYN CHANG</h1>
+            <h2> Interactive Media II | Fall 2025</h2>
+        </div>
+        <div id="buttons">
+            <form>
+                <div>
+                    <input type="radio" name="color" id="spring" value="spring" checked>
+                    <label for="spring">spring</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="color" id="summer" value="summer">
+                    <label for="summer">summer</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="color" id="autumn" value="autumn">
+                    <label for="autumn">autumn</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="color" id="winter" value="winter">
+                    <label for="winter">winter</label>
+                </div>
+            </form>
         </div>
     </header>
     <main>
@@ -64,10 +86,27 @@
         </section>
     </main>
     <footer>
-        <a
-            href="mailto:&#107;&#115;&#121;&#099;&#104;&#097;&#110;&#103;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">Email
-            Me</a>
+        <p>Kaitlyn Chang | 2025 | <a
+                href="mailto:&#107;&#115;&#121;&#099;&#104;&#097;&#110;&#103;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">Email
+                Me</a></p>
+
     </footer>
+
+    <script>
+        var btn = document.querySelector('form');
+        var body = document.querySelector('body');
+        btn.addEventListener('change', function (e) {
+            if (e.target.id == "summer") {
+                body.style.animation = "bg-color-summer 5s ease-in-out infinite alternate-reverse";
+            } else if (e.target.id == "autumn") {
+                body.style.animation = "bg-color-autumn 5s ease-in-out infinite alternate-reverse";
+            } else if (e.target.id == "winter") {
+                body.style.animation = "bg-color-winter 5s ease-in-out infinite alternate-reverse";
+            } else {
+                body.style.animation = "bg-color-spring 5s ease-in-out infinite alternate-reverse";
+            }
+        })
+    </script>
 </body>
 
 </html>

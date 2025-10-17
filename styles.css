@@ -1,7 +1,7 @@
-body {
+/* body {
     max-width: 1200px;
     min-width: 800px;
-    font-family: 'DM Serif Display';
+    font-family: 'Roboto Mono';
     color: #3e5e4e;
     justify-self: center;
     background-color: #e2efde;
@@ -9,23 +9,24 @@ body {
 
 header {
     text-align: center;
-    background-color:#AFD0BF;
+    background-color: #AFD0BF;
     padding-top: 5px;
     animation: background-color-shift 1s ease-in-out 1 forwards;
-}
+} */
 
-@keyframes background-color-shift {
+/* @keyframes background-color-shift {
     0% {
         background-color: #e2efde;
-    }
-    /* 5% {background-color: #e2efde;} */
-    100% {
+    } */
+
+/* 5% {background-color: #e2efde;} */
+/* 100% {
         background-color: #AFD0BF;
     }
-}
+} */
 
-h2 {
-    cursor:crosshair;
+/* h2 {
+    cursor: crosshair;
 }
 
 main {
@@ -36,7 +37,7 @@ main {
 #banner {
     width: 1100px;
     height: 250px;
-    background-color:#e2efde;
+    background-color: #e2efde;
     animation: gradient-shift 1s ease-in-out 1 forwards;
 }
 
@@ -44,6 +45,7 @@ main {
     0% {
         background-color: #e2efde;
     }
+
     100% {
         background: linear-gradient(0deg, rgba(226, 239, 222, 1) 0%, rgba(175, 208, 191, 1) 100%);
     }
@@ -82,4 +84,172 @@ footer {
     text-align: center;
     padding: 20px 0 20px;
     margin: 50px 0 50px
+} */
+
+
+body {
+    font-family: 'Roboto Mono';
+    display: flex;
+    flex-direction: column;
+    animation: bg-color-spring 5s ease-in-out infinite alternate-reverse;
 }
+
+@keyframes bg-color-spring {
+    0% {
+        background-color: #edeec9;
+    }
+
+    33% {
+        background-color: #dde7c7;
+    }
+
+    66% {
+        background-color: #bfd8bd;
+    }
+
+    100% {
+        background-color: #98c9a3;
+    }
+}
+
+@keyframes bg-color-summer {
+    0% {
+        background-color: #d7dace;
+    }
+
+    33% {
+        background-color: #ffe9b3;
+    }
+
+    66% {
+        background-color: #ffdc74;
+    }
+
+    100% {
+        background-color: #ffc176;
+    }
+}
+
+@keyframes bg-color-autumn {
+    0% {
+        background-color: #ffcb69;
+    }
+
+    33% {
+        background-color: #e8ac65;
+    }
+
+    66% {
+        background-color: #d08c60;
+    }
+
+    100% {
+        background-color: #b58463;
+    }
+}
+
+@keyframes bg-color-winter {
+    0% {
+        background-color: #edf2fb;
+    }
+
+    33% {
+        background-color: #e2eafc;
+    }
+
+    66% {
+        background-color: #d7e3fc;
+    }
+
+    100% {
+        background-color: #ccdbfd;
+    }
+}
+
+header {
+    height: 350px;
+    display: flex;
+}
+
+h1 {
+    font-family: 'Inter';
+    width: 50vmax;
+    font-size: 150px;
+    position: relative;
+    top: -18vmin;
+    left: -1vmax;
+}
+
+header h2 {
+    font-size: 24px;
+    position: relative;
+    top: -30vmin;
+    left: 2vmax;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2vmax;
+    padding-top: 5vmin;
+}
+
+ul {
+    padding-inline-start: 0;
+}
+
+ul li {
+    list-style-type: none;
+    line-height: 3rem;
+}
+
+ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: grey;
+}
+
+section {
+    background-color: rgb(255, 255, 255, 0.25);
+    border: solid black 1px;
+    padding: 0 2vmax;
+    border-radius: 10px;
+    text-align: left;
+}
+
+section:hover {
+    transform: scale(1.05);
+}
+
+section h2 {
+    font-style: italic;
+}
+
+footer {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    height: 5vmin;
+    padding: 5vmin;
+    align-items: center;
+}
+
+#buttons {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10vmax;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2vmin;
+}
+
+/* Invert colors of section boxes on hover */
