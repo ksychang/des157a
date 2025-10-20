@@ -61,6 +61,11 @@ article {
     border-radius: 100px;
 }
 
+#entries {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 #num1 {
     background-color: red;
 }
