@@ -1,0 +1,67 @@
+#container {
+    display: flex;
+    background-color: #E1EAD2;
+    color: #3E5E4E;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    width: 50vmax;
+    height: 100vmin;
+
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Brawler';
+    font-size: 24px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2vmin;
+}
+
+h1 {
+    font-family: 'Bodoni Moda';
+    font-size: 64px;
+}
+
+#cover {
+    height: 100vmin;
+    width: 50vmax;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: url(images/AdobeExpress-DES157-MadLibs1-ezgif.com-optimize.gif);
+    background-size: cover;
+    transform: translateX(0);
+    transition: transform 700ms cubic-bezier(.22, .9, .3, 1);
+}
+
+#cover.left {
+    transform: translateX(-100%);
+}
+
+input[type="text"] {
+    border-radius: 5px;
+    border: solid #3E5E4E;
+}
+
+input[type="text"]:focus {
+    border: 1px solid #D6D9DC;
+    outline: solid gray;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input[type="submit"],
+button {
+    color: white;
+    background-color: #3E5E4E;
+    border-radius: 25px;
+}
+
+button {
+    padding: 0 1rem;
+}

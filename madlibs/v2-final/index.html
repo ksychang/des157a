@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,700&family=Brawler:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <title>MadLibs Version 1</title>
+</head>
+
+<body>
+    <div id="container">
+        <section>
+            <h1>MadLibs.</h1>
+            <form>
+                <label for="to-person">Name of Person</label>
+                <input type="text" id="to-person" required>
+
+                <label for="noun1">Plural Noun</label>
+                <input type="text" id="noun1" required>
+
+                <label for="noun2">Plural Noun</label>
+                <input type="text" id="noun2" required>
+
+                <label for="noun3">Plural Noun</label>
+                <input type="text" id="noun3" required>
+
+                <label for="from-person">Name</label>
+                <input type="text" id="from-person" required>
+
+                <input type="submit">
+            </form>
+        </section>
+
+        <section>
+            <!-- <h1>MadLibs.</h1> -->
+            <p>Dear <strong id="ml-to-person"></strong>,</p>
+            <p><strong id="ml-noun1"></strong> are red,</p>
+            <p><strong id="ml-noun2"></strong> are blue,</p>
+            <p>You love me and</p>
+            <p>I love <strong id="ml-noun3"></strong>!</p>
+            <p>From <strong id="ml-from-person"></strong>.</p>
+            <button type=button id="play-again">Play Again</button>
+        </section>
+    </div>
+    <div id="cover"></div>
+</body>
+
+</html>
