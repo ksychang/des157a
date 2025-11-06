@@ -6,10 +6,10 @@ body {
     height: 100vmin;
     font-family: 'Montserrat';
     background-color: #4E598C;
-    animation: bg-color 30s ease-in-out infinite alternate-reverse;
+    animation: bg-color-home 30s ease-in-out infinite alternate-reverse;
 }
 
-@keyframes bg-color {
+@keyframes bg-color-home {
     0% {
         background-color: #4E598C;
     }
@@ -27,8 +27,94 @@ body {
     }
 }
 
+@keyframes bg-color-space {
+    0% {
+        background-color: #3B4368;
+    }
+
+    33% {
+        background-color: #515C90;
+    }
+
+    66% {
+        background-color: #2C324E;
+    }
+
+    100% {
+        background-color: #4E598C;
+    }
+}
+
+@keyframes bg-color-time {
+    0% {
+        background-color: #56765A;
+    }
+
+    33% {
+        background-color: #153409;
+    }
+
+    66% {
+        background-color: #235610;
+    }
+
+    100% {
+        background-color: #709775;
+    }
+}
+
+@keyframes bg-color-being {
+    0% {
+        background-color: #A43D40;
+    }
+
+    33% {
+        background-color: #6B0504;
+    }
+
+    66% {
+        background-color: #9D0806;
+    }
+
+    100% {
+        background-color: #772C2F;
+    }
+}
+
 #home {
     visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vmax;
+    height: 100vmin;
+}
+
+#space {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vmax;
+    height: 100vmin;
+}
+
+#time {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vmax;
+    height: 100vmin;
+}
+
+#being {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vmax;
+    height: 100vmin;
 }
 
 #home h1,
@@ -39,7 +125,7 @@ body {
     column-span: all;
     /* margin: 0;
     padding: 10vmin; */
-    margin: 10vmin 10vmin 0;
+    margin: 0 10vmin 5vmin;
     padding: 0;
     font-weight: 300;
     color: white;
@@ -57,6 +143,7 @@ body {
     filter: blur(10px);
     letter-spacing: 1rem;
     font-weight: 500;
+    margin-top: 10vmin;
 }
 
 #home h1:hover {
@@ -140,13 +227,16 @@ h3 {
     font-weight: 300;
     color: white;
     opacity: 60%;
+    letter-spacing: 1rem;
+    filter: blur(4px);
     transition: all 2s ease-in-out;
     overflow: hidden;
 }
 
 h3:hover {
     font-weight: 500;
-    letter-spacing: 1rem;
+    letter-spacing: normal;
+    filter: blur(0px);
     transition: all 2s ease-in-out;
 }
 
@@ -161,4 +251,5 @@ p {
     color: white;
     opacity: 75%;
     font-weight: 100;
+    margin-top: 15vmin;
 }
