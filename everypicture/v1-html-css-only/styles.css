@@ -1,0 +1,86 @@
+html {
+    cursor: url('images/cursor.png'), crosshair;
+}
+
+body {
+    height: 100vmin;
+    font-family: 'Montserrat';
+    background-color: #4E598C;
+    animation: bg-color 30s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes bg-color {
+    0% {
+        background-color: #4E598C;
+    }
+
+    33% {
+        background-color: #6B0504;
+    }
+
+    66% {
+        background-color: #235610;
+    }
+
+    100% {
+        background-color: #709775;
+    }
+}
+
+#home {
+    visibility: visible;
+}
+
+#home h1,
+#space h1 {
+    text-align: center;
+    column-span: all;
+    margin: 0;
+    padding: 10vmin;
+    font-weight: 300;
+    color: white;
+    opacity: 75%;
+    transition: all 2s ease-in-out;
+}
+
+#home h1 {
+    filter: blur(10px);
+    letter-spacing: 1rem;
+    font-weight: 500;
+}
+
+#home h1:hover {
+    font-weight: 300;
+    filter: blur(0px);
+    letter-spacing: normal;
+    transition: all 2s ease-in-out;
+}
+
+#space h1:hover {
+    letter-spacing: 5rem;
+    transition: all 2s ease-in-out;
+}
+
+h3 {
+    width: 33vmax;
+    text-align: center;
+    margin: 10vmin;
+    padding: 15vmin;
+    font-weight: 300;
+    color: white;
+    opacity: 60%;
+    transition: all 2s ease-in-out;
+    overflow: hidden;
+}
+
+h3:hover {
+    font-weight: 500;
+    letter-spacing: 1rem;
+    transition: all 2s ease-in-out;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
