@@ -82,15 +82,6 @@ body {
 }
 
 #home {
-    visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vmax;
-    height: 100vmin;
-}
-
-#space {
     visibility: visible;
     position: absolute;
     top: 0;
@@ -99,7 +90,14 @@ body {
     height: 100vmin;
 }
 
-
+#space {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vmax;
+    height: 100vmin;
+}
 
 #time {
     visibility: hidden;
@@ -148,17 +146,9 @@ body {
     transition: all 2s ease-in-out;
 }
 
-#space h1 span {
-    letter-spacing: normal;
-}
-
 #space h1:hover {
     letter-spacing: 3rem;
     transition: all 5s ease-in-out;
-}
-
-#space h1:hover span {
-    letter-spacing: normal;
 }
 
 #time h1:hover {
