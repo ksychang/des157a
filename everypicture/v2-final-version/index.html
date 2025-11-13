@@ -14,40 +14,94 @@
 </head>
 
 <body>
-    <div id="home">
+    <!-- divs for backgrounds -->
+    <div class="backgrounds">
+        <div class="bg bg-home visible"></div>
+        <div class="bg bg-space"></div>
+        <div class="bg bg-time"></div>
+        <div class="bg bg-being"></div>
+    </div>
+
+    <!-- content -->
+    <div class="page visible" id="home">
         <h1>spaces of transition</h1>
         <section>
-            <h3>space</h3>
-            <h3>time</h3>
-            <h3>being</h3>
+            <h3 class="home-section visible" id="home-space">space</h3>
+            <h3 class="home-section" id="home-time">time</h3>
+            <h3 class="home-section" id="home-being">being</h3>
         </section>
     </div>
-    <div id="space">
+    <div class="page" id="space">
+        <a class="return">return</a>
         <p>capturing transitions in</p>
-        <h1>space</h1>
-        <section>
-            <h3></h3>
-            <h3></h3>
-            <h3></h3>
-        </section>
+        <h1>spac<span>e</span></h1>
+        <div class="carousel">
+            <div class="carousel-slider">
+                <div class="carousel-item">
+                    <div class="caption">a road to somewhere new</div>
+
+                    <img src="images/image3.png" alt="">
+                </div>
+                <div class="carousel-item">
+                    <div class="caption">to another level</div>
+
+                    <img src="images/image4.png" alt="">
+                </div>
+                <div class="carousel-item">
+                    <div class="caption">through a passageway</div>
+
+                    <img src="images/image11.png" alt="">
+                </div>
+                <div class="carousel-item">
+                    <div class="caption">from shadows into light</div>
+
+                    <img src="images/image14.png" alt="">
+                </div>
+
+                <!-- duplicate for seamless loop -->
+                <div class="carousel-item">
+                    <div class="caption">a road to somewhere new</div>
+
+                    <img src="images/image3.png" alt="">
+                </div>
+                <div class="carousel-item">
+                    <div class="caption">to another level</div>
+
+                    <img src="images/image4.png" alt="">
+                </div>
+                <div class="carousel-item">
+                    <div class="caption">through a passageway</div>
+
+                    <img src="images/image11.png" alt="">
+                </div>
+                <div class="carousel-item">
+                    <div class="caption">from shadows into light</div>
+
+                    <img src="images/image14.png" alt="">
+                </div>
+            </div>
+        </div>
+
     </div>
-    <div id="time">
+    <div class="page" id="time">
+        <a class="return">return</a>
         <p>capturing transitions in</p>
         <h1>time</h1>
-        <section>
-            <h3></h3>
-            <h3></h3>
-            <h3></h3>
-        </section>
+        <div class="photo-container">
+            <img src="images/image7.png" class="photo photo1" alt="">
+            <img src="images/image8.png" class="photo photo2" alt="">
+            <img src="images/image10.png" class="photo photo3" alt="">
+            <img src="images/image13.png" class="photo photo4" alt="">
+        </div>
+
     </div>
-    <div id="being">
+    <div class="page" id="being">
+        <a class="return">return</a>
         <p>capturing transitions in</p>
         <h1>being</h1>
-        <section>
-            <h3></h3>
-            <h3></h3>
-            <h3></h3>
-        </section>
+        <div class="photo-container">
+            <img class="draggable" src="images/image1.png" alt="">
+        </div>
     </div>
 </body>
 

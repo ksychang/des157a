@@ -6,7 +6,60 @@ body {
     height: 100vmin;
     font-family: 'Montserrat';
     background-color: #4E598C;
+    /* opacity: 100; */
+    transition: all 3s ease-in-out;
+}
+
+.backgrounds {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    /* ensures it's behind main content */
+}
+
+.bg {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.bg.visible {
+    opacity: 1;
+}
+
+.page {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+    z-index: 1;
+}
+
+.page.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.bg-home {
     animation: bg-color-home 30s ease-in-out infinite alternate-reverse;
+}
+
+.bg-space {
+    animation: bg-color-space 30s ease-in-out infinite alternate-reverse;
+}
+
+.bg-time {
+    animation: bg-color-time 30s ease-in-out infinite alternate-reverse;
+}
+
+.bg-being {
+    animation: bg-color-being 30s ease-in-out infinite alternate-reverse;
 }
 
 @keyframes bg-color-home {
@@ -81,26 +134,57 @@ body {
     }
 }
 
+h3 #home-space {
+    /* visibility: visible; */
+    opacity: 0.6;
+}
+
+h3 #home-space.visible {
+    opacity: 0.6;
+}
+
+h3 #home-time {
+    /* visibility: hidden; */
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+h3 #home-time.visible {
+    opacity: 0.6;
+}
+
+h3 #home-being {
+    /* visibility: hidden; */
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+h3 #home-being.visible {
+    opacity: 0.6;
+}
+
 #home {
-    visibility: visible;
+    /* visibility: visible; */
     position: absolute;
     top: 0;
     left: 0;
     width: 100vmax;
     height: 100vmin;
+    /* opacity: 100; */
 }
 
 #space {
-    visibility: hidden;
+    /* visibility: hidden; */
     position: absolute;
     top: 0;
     left: 0;
     width: 100vmax;
     height: 100vmin;
+    /* opacity: 0; */
 }
 
 #time {
-    visibility: hidden;
+    /* visibility: hidden; */
     position: absolute;
     top: 0;
     left: 0;
@@ -109,7 +193,7 @@ body {
 }
 
 #being {
-    visibility: hidden;
+    /* visibility: hidden; */
     position: absolute;
     top: 0;
     left: 0;
@@ -127,7 +211,7 @@ body {
     padding: 0;
     font-weight: 300;
     color: white;
-    opacity: 75%;
+    opacity: 0.75;
     text-indent: 0;
     transition: all 2s ease-in-out;
 }
@@ -144,6 +228,10 @@ body {
     filter: blur(0px);
     letter-spacing: normal;
     transition: all 2s ease-in-out;
+}
+
+#space h1 span {
+    letter-spacing: normal;
 }
 
 #space h1:hover {
@@ -216,10 +304,11 @@ h3 {
     padding: 15vmin;
     font-weight: 300;
     color: white;
-    opacity: 60%;
+    opacity: 0.6;
     letter-spacing: 1rem;
     filter: blur(4px);
-    transition: all 2s ease-in-out;
+    /* transition: all 2s ease-in-out; */
+    transition: font-weight 2s ease-in-out, letter-spacing 2s ease-in-out, filter 2s ease-in-out;
     overflow: hidden;
 }
 
@@ -227,19 +316,201 @@ h3:hover {
     font-weight: 500;
     letter-spacing: normal;
     filter: blur(0px);
-    transition: all 2s ease-in-out;
+    /* transition: all 2s ease-in-out; */
 }
 
 section {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100vmax;
 }
 
 p {
     text-align: center;
     color: white;
-    opacity: 75%;
+    opacity: 0.75;
     font-weight: 100;
-    margin-top: 15vmin;
+    margin-top: 10vmin;
+}
+
+a {
+    color: white;
+    opacity: 0.2;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+/* SPACE: CAROUSEL */
+.carousel {
+    width: 100vmax;
+    height: 50vmin;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-slider {
+    display: flex;
+    gap: 10vmax;
+    width: max-content;
+    animation: scroll 60s linear infinite;
+}
+
+.carousel-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: max-content;
+    height: 50vmin;
+    text-align: center;
+}
+
+/* .carousel:hover .carousel-slider {
+    animation-play-state: paused;
+} */
+
+.carousel img {
+    height: 45vmin;
+    object-fit: cover;
+    filter: brightness(90%);
+    transition: filter 0.5s ease;
+}
+
+.carousel-item:hover img {
+    filter: brightness(110%);
+}
+
+.caption {
+    color: white;
+    opacity: 0;
+    position: relative;
+    transform: translateY(-50%);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.carousel-item:hover .caption {
+    opacity: 0.6;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* TIME: PHOTOS */
+.photo-container {
+    position: relative;
+    width: 100vmax;
+    height: 50vmin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo {
+    position: absolute;
+    width: 30vmin;
+    height: auto;
+    border: 6px solid white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    transform-origin: center;
+    filter: sepia(100%);
+    animation: fling 2s ease-out forwards;
+}
+
+.photo1 {
+    top: 20%;
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.photo1 img {
+    transform: rotate(-45deg) scale(0.5);
+}
+
+.photo2 {
+    top: 10%;
+    left: 55%;
+    animation-delay: 0.4s;
+}
+
+.photo2 img {
+    transform: rotate(15deg) scale(0.5);
+}
+
+.photo3 {
+    top: 3%;
+    left: 80%;
+    animation-delay: 0.8s;
+}
+
+.photo3 img {
+    transform: rotate(5deg) scale(0.5);
+}
+
+.photo4 {
+    top: 5%;
+    left: 30%;
+    animation-delay: 1.2s;
+}
+
+.photo4 img {
+    transform: rotate(-10deg) scale(0.5);
+}
+
+@keyframes fling {
+    0% {
+        opacity: 0;
+        transform: translateY(-200px) rotate(-45deg) scale(0.5);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(20px) rotate(5deg) scale(1.05);
+    }
+
+    80% {
+        transform: translateY(0) rotate(0deg) scale(0.98);
+    }
+
+    100% {
+        transform: translateY(0) rotate(var(--final-rotation, 0deg)) scale(1);
+    }
+}
+
+.photo:hover {
+    transform: translateY(-10px) rotate(0deg) scale(1.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 1s ease;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+    filter: sepia(0%);
+}
+
+/* BEING: IMAGE DRAG */
+.photo-container {
+    position: relative;
+    width: 100vmax;
+    height: 50vmin;
+}
+
+.draggable {
+    position: absolute;
+    width: 25vmin;
+    cursor: grab;
+    user-select: none;
+    opacity: 1;
+    transition: opacity 1s ease, transform 0.1s ease;
+}
+
+.draggable:active {
+    cursor: grabbing;
 }
