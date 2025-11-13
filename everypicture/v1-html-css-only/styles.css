@@ -82,7 +82,7 @@ body {
 }
 
 #home {
-    visibility: hidden;
+    visibility: visible;
     position: absolute;
     top: 0;
     left: 0;
@@ -91,7 +91,7 @@ body {
 }
 
 #space {
-    visibility: visible;
+    visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
