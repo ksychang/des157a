@@ -1,0 +1,44 @@
+h1 {
+    text-align: center;
+    font-family: 'Roboto Mono';
+}
+
+img {
+    width: auto;
+    /* height: 30vmin; */
+}
+
+body {
+    margin: 7vmin 10vmax 7vmin;
+    font-family: 'Inter';
+    text-align: center;
+    /* animation: bg-color-spring 5s ease-in-out infinite alternate-reverse; */
+}
+
+h3 {
+    margin: 10vmin 0 7vmin;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@keyframes bg-color-spring {
+    0% {
+        background-color: #edeec9;
+    }
+
+    33% {
+        background-color: #dde7c7;
+    }
+
+    66% {
+        background-color: #bfd8bd;
+    }
+
+    100% {
+        background-color: #98c9a3;
+    }
+}
