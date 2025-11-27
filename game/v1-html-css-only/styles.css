@@ -1,0 +1,105 @@
+.visible {
+    visibility: visible;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/roboto.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Roboto';
+    background-color: #a5a58d;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* justify-content: center; */
+    align-items: center;
+    position: absolute;
+    width: 100vmax;
+    height: auto;
+    margin-top: 20vmin;
+}
+
+header {
+    width: 100vmax;
+    height: 10vmin;
+    display: flex;
+    justify-content: center;
+    align-items: last baseline;
+    gap: 10vmax;
+}
+
+button {
+    font-family: 'Roboto';
+    font-size: 16px;
+    width: 200px;
+    height: 36px;
+    color: black;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 15px;
+    background-color: rgb(0, 0, 0, 0);
+    margin-top: 10vmin;
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+button:hover,
+#options button:hover {
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    font-size: 56px;
+}
+
+.score-time {
+    display: flex;
+    gap: 10px;
+}
+
+
+#guess {
+    gap: 2vmin;
+}
+
+#incorrect-answer,
+#summary {
+    display: flex;
+    gap: 30vmax;
+    text-align: center;
+    width: 70vmax;
+    justify-content: center;
+}
+
+#options {
+    display: flex;
+    gap: 5vmax;
+}
+
+#options button {
+    /* border-color: rgb(0, 0, 0, 0); */
+    border-color: black;
+    background-color: rgba(255, 255, 255, 0.533);
+    height: 56px;
+}
+
+#end-game {
+    margin-top: 10vmin;
+    text-decoration: underline;
+    border-color: transparent;
+}
+
+#end {
+    margin-top: 0vmin;
+}

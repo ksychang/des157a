@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game On V1 - HTML & CSS</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="visible">
+        <div class="score-time">
+            <h3>SCORE: </h3>
+            <h3 id="score">0</h3>
+        </div>
+
+        <div class="score-time">
+            <h3>TIME REMAINING: </h3>
+            <h3 id="time">60</h3>
+        </div>
+    </header>
+    <main>
+        <section class="hidden" id="start">
+            <h1>Guess the <span>typeface</span></h1>
+            <button>START</button>
+        </section>
+
+        <section class="visible" id="guess">
+            <h1>The quick brown fox<br>jumped over the lazy dog.</h1>
+            <div id="options">
+                <button>OPTION 1</button>
+                <button>OPTION 2</button>
+                <button>OPTION 3</button>
+                <button>OPTION 4</button>
+            </div>
+            <button id="end-game">END GAME</button>
+        </section>
+
+        <section class="hidden" id="correct">
+            <h2>Correct!</h2>
+            <h1 class="answer">Typeface Name</h1>
+            <button>Next Question</button>
+        </section>
+
+        <section class="hidden" id="incorrect">
+            <h2>Incorrect.</h2>
+            <div id="incorrect-answer">
+                <div>
+                    <h3>Your Answer:</h3>
+                    <h1 id="wrong-answer">Wrong Sans</h1>
+                </div>
+
+                <div>
+                    <h3>Correct Answer:</h3>
+                    <h1 class="answer">Right Sans</h1>
+                </div>
+
+            </div>
+            <button>Next Question</button>
+        </section>
+
+        <section class="hidden" id="end">
+            <h3>YOUR SCORE</h3>
+            <h1 id="end-score">0</h1>
+            <div id="summary">
+                <div>
+                    <h3>IDENTIFIED:</h3>
+                    <p id="correct-list">Right Sans</p>
+                </div>
+
+                <div>
+                    <h3>MISSED:</h3>
+                    <p class="wrong-list">Wrong Sans</p>
+                </div>
+            </div>
+            <button>PLAY AGAIN</button>
+        </section>
+    </main>
+</body>
+
+</html>
